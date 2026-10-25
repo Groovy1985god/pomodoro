@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#f5f6f0">
-    <meta name="description" content="Make a little room for focus.A simple Pomodoro timer with gentle sounds,short breaks, and a calmer rhythm.">
+    <meta name="description" content="Make a little room for focus. A simple Pomodoro timer with gentle sounds, short breaks, and a calmer rhythm.">
     <title> pomo - a little room for focus</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <script src="app.js" defer></script>
 </head>
 <body>
- <svg class="icon-library"xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <symbol id="icon-sound" viewBox="0 0 24 24"><path d="m11 5-6 4H2v6h3l6 4V5Z"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
       <symbol id="icon-muted" viewBox="0 0 24 24"><path d="m11 5-6 4H2v6h3l6 4V5Zm5 4 6 6m0-6-6 6"/></symbol>
       <symbol id="icon-settings" viewBox="0 0 24 24"><path d="m9 3-.6 2.2-1.8 1L4.4 6l-2 3.5L4 11v2l-1.6 1.5 2 3.5 2.2-.2 1.8 1L9 21h4l.6-2.2 1.8-1 2.2.2 2-3.5L18 13v-2l1.6-1.5-2-3.5-2.2.2-1.8-1L13 3H9Z"/><circle cx="11" cy="12" r="3"/></symbol>
@@ -35,7 +35,7 @@
         pomo<span class="brand-period">.</span>
       </a> 
       <div class="header-actions">
-        <button class="sound-button" id="sound-tuggle" type="button" aria-pressed="true"
+        <button class="sound-button" id="sound-toggle" type="button" aria-pressed="true"
         aria-label="Completion sound on; click to mute">
         <svg class="icon"aria-hidden="true"><use href="#icon-sound"></use></svg>
         <span id="sound-label">Sound on </span>
@@ -47,7 +47,7 @@
     </header>
 
     <main>
-      <section class="focus-class" aria-labelledby="page-heading">
+      <section class="focus-space" aria-labelledby="page-heading">
         <div class="intro">
          <span class="eyebrow"> <span class="tiny-star" aria-hidden="true">✳</span>A LITTLE ROOM FOR YOU</span>
          <h1 id="page-heading"> Find your <em>focus.</em></h1>
@@ -61,7 +61,7 @@
        </div>
 
        <div class="timer-dial" id="timer-dial">
-        <svg class="progress-ring"viewBox="0 0 300 300" aria-hidden="true">
+        <svg class="progress-ring" viewBox="0 0 300 300" aria-hidden="true">
               <circle class="ring-track" cx="150" cy="150" r="137"/>
               <circle class="ring-progress" id="ring-progress" cx="150" cy="150" r="137" pathLength="100"/>
               <circle class="ring-inner" cx="150" cy="150" r="123"/>
@@ -88,9 +88,9 @@
 
           <div class="session-progress">
             <div class="session-dots" id="session-dots" aria-label="0 of 4 focus sessions completed">
-                <span class="session-dot is current"></span><span class="session-dot"></span><span class="session-dot"></span><span class="session-dot"></span>
+                <span class="session-dot is-current"></span><span class="session-dot"></span><span class="session-dot"></span><span class="session-dot"></span>
             </div>
-            <p> id="session-caption" Session <strong>1</strong> of 4</p>
+            <p id="session-caption"> Session <strong>1</strong> of 4</p>
           </div>
           <div class="card-note" id="card-note">
             <svg class="icon" aria-hidden="true"><use href="#icon-leaf"></use></svg>
@@ -99,19 +99,19 @@
       </section>
 
       <section class="daily-summary" aria-label="Today's focus progress">
-        <div class="today-label"><span-class=today-dot></span> TODAY SO FAR</div>
+        <div class="today-label"><span class=today-dot></span> TODAY SO FAR</div>
        <div class="summary-item"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg><span><strong id="sessions-total">0</strong> <span id="sessions-word">sessions</span></span></div>
     <span class="summary-divider" aria-hidden="true"></span> 
     <div class="summary-item"><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg><span><strong id="minutes-total">0</strong> min focused</span></div>
     </section>
 
-     <p class="keyboard-hint"><kbd>space</kbd> to start or pause <span aria-hidden="true">.</span> <kbd>R</kbd> to reset</p>  
+     <p class="keyboard-hint"><kbd>space</kbd> to start or pause <span aria-hidden="true">·</span> <kbd>R</kbd> to reset</p>  
        </section>
     </main>
 
     <footer class="site-footer">
         <span>Less rush. More rhythm. </span>
-        <span class="fotter-tip"><svg class="icon" aria-hidden="true"><use href="#icon-cup"></use></svg> Rest is part of the process.</span>
+        <span class="footer-tip"><svg class="icon" aria-hidden="true"><use href="#icon-cup"></use></svg> Rest is part of the process.</span>
     </footer>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
