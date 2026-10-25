@@ -1,0 +1,47 @@
+:root {
+ color-scheme: light;
+ --color-background: #f5f6f0;
+ --color-surface: #ffffff;
+ --color-primary: #44634b;
+ --color-primary-hover: #344f3a;
+ --color-text: #2f3e32;
+ --color-muted: #65705e;
+ --color-border: #e8ebe2;
+ --color-soft: #f2f4ed;
+ --color-accent: #a6b98c;
+ --color-ring: #a9bd94;
+ --color-danger: #ac4139;
+ --color-focus: #527646;
+ --scrollbar-thumb: #bbc5b3;
+ --scrollbar-track: #f0f239;
+ --scrollbar-hover: #9dac91;
+ --scrollbar-active:#7c9290;
+ --font-body: "DM Sans", "Avenir Next", "Trebuchet MS", sans-serif;
+ --font-display: "Lora", Georgia, serif;
+ --radius-card: 1.75rem;
+ --radius-control: 0.875rem;
+ --radius-pill: 100rem;
+ --space-unit: 0.5rem;
+ --page-max:72rem;   
+}
+
+* {box-sizing:border-box; scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb)var(--scrollbar-track);  }
+*::-webkit-scrollbar {width:8px; height:8px; }
+*::-webkit-scrollbar-track {background: var(--scrollbar-track); }
+*::-webkit-scrollbar-thumb {background:var(--scrollbar-thumb); border-radius: var (--radius-pill); }
+*::-webkit-scrollbar-thumb:hover {background: var(--scrollbar-hover); }
+*::-webkit-scrollbar-thumb:active {background:var(--scrollbar-active); }
+html {min-width:20rem; min-height:100%; scrollbar-gutter: stable; }
+body {margin:0; min-height:100vh; display:flex;  flex-direction: column; color: var(--color-text);background: var(--color-background); font-family:var(--font-body); font-size:1rem; line-height: 1.5; -webkit-font-smoothing: antialised; }
+body::before { position: fixed; inset: 0; z-index: -1; content: ""; pointer-events: none; background: radial-gradient(ellipse at 13% 43%, #e9eddf99 0, transparent 40%), radial-gradient(ellipse at 86% 73%, #e6ebdd80 0, transparent 36%); }
+button, input {font: inherit;}
+button, a {-webkit-tap-highlight-color: transparent; }
+button { cursor:pointer; }
+button {transition: background 160ms ease,color 160ms ease, border-color 160ms ease,transform 160ms ease, box-shadow 160ms ease; }
+button:active:not(:disabled) { transform: translateY(1px); }
+button:disabled {cursor:not-allowed; opacity: 0.5;}
+:focus-visible { outline:3px solid var(--color-focus); outline-offset:4px; }
+button, input {color:inherit; }
+button {border:0;}
+.icon-library {position:absolute;width: 0; height:0; overflow:hidden; }
+.icon {display: inline-block;width: 1.25rem; height: 1,25rem; flex-shrink:0; fill:none; stroke: currentColor; stroke-width:1.65;stroke-linecap: round; stroke-linejoin: round;vertical-align: middle;}
